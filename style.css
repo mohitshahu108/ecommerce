@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: cornflowerblue;
+}
+
+/* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the navigation bar */
+.navbar {
+  width: 100%;
+  background-color: #756575;
+  overflow: auto;
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: #000;
+}
+
+/* Current/active navbar link */
+.active {
+  background-color: cornflowerblue;
+}
+/* Cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 100%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 2px 14px;
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 700px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+  .navbar {
+    display: block;
+    justify-content: unset;
+  }
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .column {
+    width: 100%;
+  }
+}
+
+/* Footer is here*/
+.footer {
+  text-align: center;
+  font-size: 12px;
+  line-height: 20px;
+  padding: 100px 0 60px 0;
+}
+.footer .footer__links {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.footer .footer__nav {
+  list-style: none;
+  margin: 0 30px 0 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.social-icons {
+  display: flex;
+  margin-bottom: 15px;
+}
+.social-icons li {
+  list-style-type: none;
+}
+.footer p {
+  margin: 30px auto 0;
+  font-family: "Avenir Book";
+  font-size: 14px;
+  color: #72778e;
+}
+.footer__text {
+  align-items: center;
+}
